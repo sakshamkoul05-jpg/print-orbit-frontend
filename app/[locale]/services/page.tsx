@@ -116,7 +116,7 @@ export default function ServicesPage() {
             Have a unique project?
           </h2>
           <p className="text-xl text-slate mb-12 leading-relaxed">
-            Whether it's an oversized industrial banner or a limited edition luxury art book, 
+            Whether it&apos;s an oversized industrial banner or a limited edition luxury art book, 
             our master printers can bring any vision to life.
           </p>
           <Link 

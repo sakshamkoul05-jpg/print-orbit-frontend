@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 import { useCart } from '@/store/cart';
 import { Trash2, Plus, Minus, ArrowRight, ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function CartPage({ params }: { params: { locale: string } }) {
@@ -16,7 +17,7 @@ export default function CartPage({ params }: { params: { locale: string } }) {
           <ShoppingBag className="w-12 h-12" />
         </div>
         <h1 className="text-4xl font-heading font-bold text-navy mb-4">Your cart is empty</h1>
-        <p className="text-slate mb-12 max-w-md mx-auto">Looks like you haven't added any designs yet. Let's create something amazing!</p>
+        <p className="text-slate mb-12 max-w-md mx-auto">Looks like you haven&apos;t added any designs yet. Let&apos;s create something amazing!</p>
         <Link 
           href={`/${params.locale}/catalogue`} 
           className="px-10 py-4 bg-brandBlue text-white rounded-full font-bold text-lg hover:bg-brandBlue-light transition-all hover:scale-105 premium-shadow inline-block"
@@ -45,7 +46,7 @@ export default function CartPage({ params }: { params: { locale: string } }) {
                 className="bg-white p-6 rounded-3xl border border-navy/5 flex items-center gap-6 premium-shadow group"
               >
                 <div className="w-24 h-24 rounded-2xl overflow-hidden bg-slate-100 shrink-0">
-                  <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <Image src={item.image} alt={item.name} width={96} height={96} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 
                 <div className="flex-1">

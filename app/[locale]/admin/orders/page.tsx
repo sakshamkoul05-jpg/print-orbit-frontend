@@ -1,6 +1,5 @@
 import { prisma } from '@/lib/prisma';
-import { motion } from 'framer-motion';
-import { Package, Search, Filter, ChevronRight, Clock, CheckCircle } from 'lucide-react';
+import { Package, Search, Filter, ChevronRight, LayoutDashboard, ShoppingCart, Users } from 'lucide-react';
 import Link from 'next/link';
 
 export default async function OrdersPage() {
@@ -111,5 +110,3 @@ export default async function OrdersPage() {
   );
 }
 
-// Missing imports for a server component
-import { LayoutDashboard, ShoppingCart, Users } from 'lucide-react';

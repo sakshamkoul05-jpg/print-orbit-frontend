@@ -17,7 +17,7 @@ export default function CustomizePage({ params }: { params: { locale: string, te
 
   return (
     <div className="h-screen w-full overflow-hidden">
-      <DesignEditor templateId={templateId} />
+      <DesignEditor params={{ locale: params.locale, templateId }} />
     </div>
   );
 }

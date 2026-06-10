@@ -242,7 +242,7 @@ export default function DesignEditor({ params }: { params: { locale: string, tem
                 <select 
                   className="w-full p-2 rounded-lg bg-offWhite border border-navy/10 text-sm outline-none"
                   onChange={(e) => {
-                    selectedObject.set('fontFamily', e.target.value);
+                    (selectedObject as any).set('fontFamily', e.target.value);
                     fabricCanvas.current?.renderAll();
                   }}
                 >
@@ -255,9 +255,9 @@ export default function DesignEditor({ params }: { params: { locale: string, tem
                   <span className="text-xs text-slate">Font Size</span>
                   <input 
                     type="number" 
-                    value={selectedObject.fontSize as number}
+                    value={(selectedObject as any).fontSize as number}
                     onChange={(e) => {
-                      selectedObject.set('fontSize', parseInt(e.target.value));
+                      (selectedObject as any).set('fontSize', parseInt(e.target.value));
                       fabricCanvas.current?.renderAll();
                     }}
                     className="w-20 p-1 text-right bg-offWhite border border-navy/10 rounded text-sm"

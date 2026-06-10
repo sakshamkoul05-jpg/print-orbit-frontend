@@ -60,7 +60,7 @@ export default function AdminDashboard() {
         <header className="flex justify-between items-center mb-12">
           <div>
             <h1 className="text-3xl font-heading font-bold text-navy">Dashboard Overview</h1>
-            <p className="text-slate">Welcome back, Admin. Here is what's happening today.</p>
+            <p className="text-slate">Welcome back, Admin. Here is what&apos;s happening today.</p>
           </div>
           <div className="flex items-center gap-4">
             <div className="text-right">

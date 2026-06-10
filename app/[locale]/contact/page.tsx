@@ -2,6 +2,7 @@
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Clock, MessageCircle } from 'lucide-react';
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function ContactPage() {

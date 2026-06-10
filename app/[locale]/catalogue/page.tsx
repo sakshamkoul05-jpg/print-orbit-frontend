@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Filter, ArrowUpDown, ShoppingBag, Sparkles } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useMemo } from 'react';
 
 // Mock Data for initial build (will be replaced by API/Prisma later)
@@ -172,9 +173,11 @@ export default function CataloguePage() {
                 className="group bg-white border border-navy/5 rounded-[2rem] overflow-hidden hover:border-brandBlue/30 transition-all hover:shadow-2xl"
               >
                 <div className="relative aspect-square overflow-hidden">
-                  <img 
+                  <Image 
                     src={product.image} 
                     alt={product.name} 
+                    width={400}
+                    height={400}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-navy text-xs font-bold rounded-full flex items-center gap-1 shadow-sm">

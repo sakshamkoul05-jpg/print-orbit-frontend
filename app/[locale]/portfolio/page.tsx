@@ -1,11 +1,17 @@
 "use client";
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Maximize2, ExternalLink, ArrowRight } from 'lucide-react';
+import { Maximize2, ExternalLink, ArrowRight, X } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
-const MOCK_WORK = [
+interface WorkItem {
+  id: string; title: string; category: string; image: string;
+  client: string; desc: string;
+}
+
+const MOCK_WORK: WorkItem[] = [
   {
     id: 'hosp-annual',
     title: 'Regional Hospital Annual Report',
@@ -59,7 +65,7 @@ const MOCK_WORK = [
 export default function PortfolioPage() {
   const t = useTranslations('Portfolio');
   const [filter, setFilter] = useState('all');
-  const [selectedWork, setSelectedWork] = useState(null);
+  const [selectedWork, setSelectedWork] = useState<WorkItem | null>(null);
 
   const filteredWork = MOCK_WORK.filter(item => filter === 'all' || item.category === filter);
 
@@ -126,9 +132,11 @@ export default function PortfolioPage() {
               onClick={() => setSelectedWork(item)}
               className="relative group cursor-pointer break-inside-avoid rounded-3xl overflow-hidden border border-navy/5 hover:border-brandBlue/30 transition-all hover:shadow-2xl"
             >
-              <img 
+              <Image 
                 src={item.image} 
                 alt={item.title} 
+                width={800}
+                height={item.image.includes('h=1000') || item.image.includes('h=1200') ? 1000 : 800}
                 className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
@@ -174,7 +182,7 @@ export default function PortfolioPage() {
               className="relative bg-offWhite w-full max-w-5xl rounded-[2.5rem] overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-2"
             >
               <div className="h-[400px] lg:h-full relative">
-                <img src={selectedWork.image} alt={selectedWork.title} className="w-full h-full object-cover" />
+                <Image src={selectedWork.image} alt={selectedWork.title} fill className="object-cover" />
               </div>
               <div className="p-8 lg:p-12 flex flex-col justify-center">
                 <div className="flex justify-between items-start mb-6">
@@ -193,7 +201,7 @@ export default function PortfolioPage() {
                   {selectedWork.desc}
                 </p>
                 <div className="p-6 bg-navy/5 rounded-2xl border border-navy/10 italic text-slate mb-8">
-                  "Print Orbit transformed our vision into a tactile masterpiece. The precision in color and the quality of paper exceeded our expectations."
+                  &ldquo;Print Orbit transformed our vision into a tactile masterpiece. The precision in color and the quality of paper exceeded our expectations.&rdquo;
                   <div className="mt-4 font-bold text-navy not-italic">— Project Lead, {selectedWork.client}</div>
                 </div>
                 <Link 
@@ -211,5 +219,3 @@ export default function PortfolioPage() {
   );
 }
 
-// Need to import X from lucide-react for the modal
-import { X } from 'lucide-react';
