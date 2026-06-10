@@ -1,3 +1,4 @@
+"use client";
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Printer, Palette, Layers, Zap, ShieldCheck, Star, ArrowRight } from 'lucide-react';
