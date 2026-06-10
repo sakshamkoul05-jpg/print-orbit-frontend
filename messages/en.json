@@ -1,0 +1,97 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "catalogue": "Catalogue",
+    "customPrint": "Custom Print",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "admin": "Admin"
+  },
+  "Hero": {
+    "title": "Print That Commands Attention",
+    "subtitle": "Ultimate Speed & Premium Quality in Kangra",
+    "cta_customizer": "Design Your Print",
+    "cta_quote": "Get Quick Quote",
+    "trusted": "Trusted by leading hospitals, corporations, and Kashmiri organizations"
+  },
+  "Services": {
+    "title": "Our Printing & Design Services",
+    "subtitle": "From business essentials to custom brand assets, we design and print everything with extreme precision.",
+    "magazines": "Magazine & Editorial Design",
+    "magazines_desc": "Professional layout and high-fidelity printing for magazines, journals, and company annual reports.",
+    "business_cards": "Premium Business Cards",
+    "business_cards_desc": "Luxury textures, foil stamping, and embossed finishes that make a lasting first impression.",
+    "brochures": "Brochures & Pamphlets",
+    "brochures_desc": "Eye-catching marketing materials with precision folding and vibrant color reproduction.",
+    "banners": "Large Format Banners",
+    "banners_desc": "High-visibility outdoor and indoor banners, vinyl prints, and event signage.",
+    "packaging": "Product Packaging & Labels",
+    "packaging_desc": "Custom-shaped boxes and luxury labels that elevate your product's brand value.",
+    "custom": "Custom Print Jobs",
+    "custom_desc": "Specialized requirements? We handle unique formats and materials for any niche.",
+    "cta": "Get an Instant Quote"
+  },
+  "About": {
+    "title": "About Print Orbit",
+    "subtitle": "The printing powerhouse of Kangra valley.",
+    "story": "Print Orbit has been delivering exceptional quality print and design services across Kangra. We have partnered with major hospitals, regional Kashmiri organizations, and prominent corporate clients to bring designs to life with state-of-the-art print tech.",
+    "quality_title": "Best Quality & Ultimate Speed",
+    "quality_desc": "We understand that in business, time is money. That's why we offer 24-hour turnaround on standard items without compromising on texture and color fidelity.",
+    "infrastructure_title": "State-of-the-Art Infrastructure",
+    "infrastructure_desc": "Our facility is equipped with the latest offset and digital printing presses, ensuring razor-sharp precision and consistent color reproduction for every single page.",
+    "trust_title": "Built on Trust",
+    "trust_desc": "Serving the heartbeat of Kangra—from healthcare providers to cultural organizations—we've built a reputation for reliability and excellence."
+  },
+  "Catalogue": {
+    "title": "Our Product Catalogue",
+    "subtitle": "Premium printing options tailored to your needs. Choose a product and start customizing.",
+    "filter": "Filter By",
+    "sort": "Sort By",
+    "all": "All Products",
+    "newest": "Newest",
+    "popular": "Popular",
+    "price_low_high": "Price: Low to High",
+    "price_high_low": "Price: High to Low",
+    "no_products": "No products found in this category."
+  },
+  "Portfolio": {
+    "title": "Our Masterpieces",
+    "subtitle": "A showcase of precision, color, and design executed for the most demanding clients.",
+    "filter": "Filter Work",
+    "all": "All Work",
+    "corporate": "Corporate",
+    "medical": "Medical",
+    "cultural": "Cultural",
+    "editorial": "Editorial",
+    "cta": "Start Your Project"
+  },
+  "Contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to elevate your brand? Our design and print experts are here to help.",
+    "form_title": "Request a Quote",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "subject": "Project Type",
+    "message": "Tell us about your project",
+    "send": "Send Message",
+    "success": "Message sent successfully! We'll get back to you shortly.",
+    "details_title": "Contact Details",
+    "address": "Address",
+    "phone_label": "Phone",
+    "email_label": "Email",
+    "hours": "Operating Hours"
+  },
+  "Common": {
+    "add_to_cart": "Add to Cart",
+    "customize": "Customize",
+    "upload_design": "Upload Design",
+    "cart": "Cart",
+    "checkout": "Checkout",
+    "login": "Login",
+    "register": "Register",
+    "order_now": "Order Now"
+  }
+}
