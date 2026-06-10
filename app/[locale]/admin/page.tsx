@@ -30,7 +30,7 @@ export default function AdminDashboard() {
           </Link>
           <Link href="/admin/products" className="flex items-center gap-3 p-3 hover:bg-white/10 rounded-xl transition-colors">
             <Package className="w-5 h-5" /> Products
-          </LInk>
+          </Link>
           <Link href="/admin/customers" className="flex items-center gap-3 p-3 hover:bg-white/10 rounded-xl transition-colors">
             <Users className="w-5 h-5" /> Customers
           </Link>
