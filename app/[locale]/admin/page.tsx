@@ -1,17 +1,26 @@
+"use client";
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { LayoutDashboard, Package, ShoppingCart, Users, FileText, Settings } from 'lucide-react';
 import Link from 'next/link';
+import React from 'react';
+
+interface StatItem {
+  label: string;
+  value: string;
+  icon: React.ReactNode;
+  color: string;
+}
+
+const STATS_DATA: StatItem[] = [
+  { label: 'Total Orders', value: '1,284', icon: <ShoppingCart className="w-6 h-6" />, color: 'bg-blue-500' },
+  { label: 'Revenue', value: '₹4,52,000', icon: <LayoutDashboard className="w-6 h-6" />, color: 'bg-green-500' },
+  { label: 'Active Customers', value: '842', icon: <Users className="w-6 h-6" />, color: 'bg-purple-500' },
+  { label: 'Pending Reviews', value: '12', icon: <FileText className="w-6 h-6" />, color: 'bg-orange-500' },
+];
 
 export default function AdminDashboard() {
   const t = useTranslations('Navbar');
-
-  const stats = [
-    { label: 'Total Orders', value: '1,284', icon: <ShoppingCart className="w-6 h-6" />, color: 'bg-blue-500' },
-    { label: 'Revenue', value: '₹4,52,000', icon: <LayoutDashboard className="w-6 h-6" />, color: 'bg-green-500' },
-    { label: 'Active Customers', value: '842', icon: <Users className="w-6 h-6" />, color: 'bg-purple-500' },
-    { label: 'Pending Reviews', value: '12', icon: <FileText className="w-6 h-6" />, color: 'bg-orange-500' },
-  ];
 
   return (
     <div className="flex min-h-screen bg-slate-50">
@@ -61,10 +70,10 @@ export default function AdminDashboard() {
             <div className="w-10 h-10 bg-brandBlue rounded-full" />
           </div>
         </header>
-
+        
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {stats.map((stat, i) => (
+          {STATS_DATA.map((stat, i) => (
             <motion.div 
               key={i}
               initial={{ opacity: 0, y: 20 }}
@@ -80,7 +89,7 @@ export default function AdminDashboard() {
             </motion.div>
           ))}
         </div>
-
+        
         {/* Recent Orders Table */}
         <div className="bg-white rounded-3xl border border-navy/5 premium-shadow overflow-hidden">
           <div className="p-6 border-b border-navy/5 flex justify-between items-center">
